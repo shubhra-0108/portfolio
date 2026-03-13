@@ -273,3 +273,19 @@ font-size:14px;
 }
 
 }
+.skills-icons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:20px;
+}
+
+.skills-icons img{
+width:50px;
+transition:0.3s;
+}
+
+.skills-icons img:hover{
+transform:scale(1.2);
+}
