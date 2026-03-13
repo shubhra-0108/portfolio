@@ -13,49 +13,90 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Tilt Effect -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<!-- Typed JS -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
 </head>
 
 <body>
 
+<div class="cursor-glow"></div>
+
+<div id="particles-js"></div>
+
+<!-- NAVBAR -->
+
 <nav>
+
 <h2 class="logo">Shubhra</h2>
 
-<ul>
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<ul id="nav-menu">
+
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#stats">Stats</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
+
+<!-- HERO -->
 
 <header class="hero">
 
 <h1>Hi, I'm <span>Shubhra Pandey</span></h1>
 
-<p>MERN Stack Developer | DSA Enthusiast | AI/ML Explorer</p>
+<p><span id="typing"></span></p>
 
-<p>Solved 200+ problems on LeetCode</p>
+<p>✔ 200+ Problems Solved on LeetCode</p>
 
-<a class="btn" href="#projects">View Projects</a>
+<div class="hero-buttons">
+
+<a href="#projects" class="btn">View Projects</a>
+
+<a href="resume.html" class="btn2">
+<i class="fa fa-download"></i> View Resume
+</a>
+
+</div>
 
 </header>
+
+<!-- ABOUT -->
 
 <section id="about">
 
 <h2>About Me</h2>
 
 <p>
+I am a 3rd year Computer Science Engineering (AI) student passionate
+about building full-stack applications and solving complex algorithmic
+problems.
 
-3rd year Computer Science Engineering (AI) student passionate about
-building full-stack applications and solving algorithmic problems.
-
-Strong foundation in Data Structures, OOP in C++, and MERN stack
-development. Always exploring AI and Machine Learning applications.
-
+I specialize in the MERN stack and enjoy solving problems on LeetCode.
+Currently exploring Artificial Intelligence and Machine Learning.
 </p>
 
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills">
 
@@ -76,58 +117,57 @@ development. Always exploring AI and Machine Learning applications.
 
 </section>
 
+<!-- PROJECTS -->
+
 <section id="projects">
 
 <h2>Projects</h2>
 
 <div class="projects">
 
-<div class="card">
+<div class="project-card tilt">
+
+<img src="assets/ai-learning.png" alt="AI Learning Project" class="project-img">
 
 <h3>AI Driven Adaptive Learning Platform</h3>
 
 <p>
-
-Intelligent learning system that adapts course content based on
-student performance and quiz analysis.
-
+AI platform that adapts learning content based on performance.
 </p>
+
+<a href="https://github.com/shubhra-0108/Ai-driven-adaptive-learning-ecosystem">
+View Code
+</a>
 
 </div>
 
-<div class="card">
+<div class="project-card">
 
 <h3>Real-Time Object Detection System</h3>
 
 <p>
-
-Computer vision project using YOLO and OpenCV for detecting
-objects in real time.
-
+Computer vision project using YOLO and OpenCV for detecting objects
+in real time.
 </p>
 
 </div>
 
-<div class="card">
+<div class="project-card">
 
 <h3>Weather Forecast System</h3>
 
 <p>
-
-Web application that fetches real-time weather data using APIs.
-
+Web app that fetches real-time weather data using APIs.
 </p>
 
 </div>
 
-<div class="card">
+<div class="project-card">
 
 <h3>Myntra Clone</h3>
 
 <p>
-
-E-commerce frontend clone built using HTML, CSS and Node.js backend.
-
+E-commerce UI clone built using HTML, CSS, Node.js and Express.
 </p>
 
 </div>
@@ -135,6 +175,44 @@ E-commerce frontend clone built using HTML, CSS and Node.js backend.
 </div>
 
 </section>
+
+<!-- GITHUB -->
+
+<section id="github">
+
+<h2>GitHub Contributions</h2>
+
+<img src="https://ghchart.rshah.org/shubhra-0108" alt="GitHub chart">
+
+</section>
+
+<!-- STATS -->
+
+<section id="stats">
+
+<h2>GitHub Stats</h2>
+
+<img src="https://github-readme-stats.vercel.app/api?username=shubhra-0108&show_icons=true&theme=tokyonight">
+
+<br><br>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shubhra-0108&layout=compact&theme=tokyonight">
+
+</section>
+
+<!-- LEETCODE -->
+
+<section id="leetcode">
+
+<h2>LeetCode Stats</h2>
+
+<p>200+ Problems Solved</p>
+
+<img src="https://leetcard.jacoblin.cool/Shubhra_0108?theme=dark&font=baloo" alt="LeetCode stats">
+
+</section>
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -161,6 +239,44 @@ E-commerce frontend clone built using HTML, CSS and Node.js backend.
 <p>© 2026 Shubhra Pandey</p>
 
 </footer>
+
+<!-- PARTICLES -->
+
+<script>
+
+particlesJS("particles-js", {
+
+particles: {
+number: { value: 80 },
+size: { value: 3 },
+move: { speed: 2 },
+line_linked: { enable: true }
+}
+
+});
+
+</script>
+
+<!-- TYPING -->
+
+<script>
+
+var typed = new Typed("#typing", {
+
+strings: [
+"MERN Stack Developer",
+"AI / ML Explorer",
+"DSA Enthusiast",
+"200+ LeetCode Problems Solved"
+],
+
+typeSpeed:60,
+backSpeed:40,
+loop:true
+
+});
+
+</script>
 
 <script src="script.js"></script>
 
